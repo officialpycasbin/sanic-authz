@@ -1,0 +1,46 @@
+[project]
+name = "sanic-authz"
+version = "0.1.0"
+authors = [
+    {name = "Yang Luo", email = "hsluoyz@qq.com"},
+]
+description = "An authorization middleware for sanic based on PyCasbin"
+readme = "README.md"
+keywords = [
+    "sanic",
+    "casbin",
+    "pycasbin",
+    "authorization",
+    "access-control",
+    "middleware",
+    "authentication",
+    "security",
+    "async",
+]
+dynamic = ["dependencies"]
+requires-python = ">=3.7"
+license = {text = "Apache 2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Home-page = "https://github.com/officialpycasbin/sanic-authz"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.black]
+line-length = 120
